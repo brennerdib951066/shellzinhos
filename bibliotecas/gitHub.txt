@@ -1,0 +1,6 @@
+git init "$HOME/Área de Trabalho/scripts/"
+git add "$HOME/Área de Trabalho/scripts/"
+git commit -m 'Commit'
+git branch -M main
+git remote add origin https://github.com/brennerdib951066/shell.git
+#git push -u origin main
