@@ -33,9 +33,9 @@ function criarArquivosScripts(){
         read nomeArquivoSH
         [[ "$nomeArquivoSH" ]] && break || continue
     done
-        >"${pastaScripts}/$nomeArquivoSH" && chmod +x "${pastaScripts}/$nomeArquivoSH"\
+        >"${pastaScripts}/$nomeArquivoSH.sh" && chmod +x "${pastaScripts}/$nomeArquivoSH.sh"\
         &&\
-        cat>>"${pastaScripts}/$nomeArquivoSH"<<EOF
+        cat>>"${pastaScripts}/$nomeArquivoSH.sh"<<EOF
 #!/usr/bin/env bash
 
 ####################VARIAVEIS DO PROGRAMA##################
@@ -44,7 +44,7 @@ function criarArquivosScripts(){
 
 ##########################################################
 EOF
-        kate "${pastaScripts}/$nomeArquivoSH" &>- &
+        kate "${pastaScripts}/$nomeArquivoSH.sh" &>- &
         clear
 
 }
@@ -56,9 +56,9 @@ function criarArquivosPython3(){
         read nomeArquivoPY
         [[ "$nomeArquivoPY" ]] && break || continue
     done
-        >"${pastaPython}/$nomeArquivoPY" && chmod +x "${pastaPython}/$nomeArquivoPY"\
+        >"${pastaPython}/$nomeArquivoPY.py" && chmod +x "${pastaPython}/$nomeArquivoPY.py"\
         &&\
-        cat>>"${pastaPython}/$nomeArquivoPY"<<EOF
+        cat>>"${pastaPython}/$nomeArquivoPY.py"<<EOF
 #!/usr/bin/env python3
 
 ####################VARIAVEIS DO PROGRAMA##################
@@ -67,7 +67,7 @@ function criarArquivosPython3(){
 
 ##########################################################
 EOF
-        kate "${pastaPython}/$nomeArquivoPY" &>- &
+        kate "${pastaPython}/$nomeArquivoPY.py" &>- &
         clear
 }
 ((REPLY==2)) && criarArquivosPython3                   #Chamando a função criarArquivosPython3

@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-arquivo="$HOME/Downloads/baixados"
-listaDenner="denner@192.168.0.2:/home"
