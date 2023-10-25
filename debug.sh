@@ -13,3 +13,6 @@ if [[ "$DEBUG" -eq "1" ]]; then
     echo "Esta ligado o debugger"
     set -x
 fi
+
+asas
+
